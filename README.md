@@ -26,7 +26,7 @@ phys3071/
 ### Quick (recommended)
 
 ```bash
-cd phys3071/
+cd phys3071-Astrophysics-notes
 ./compile.sh
 ```
 
