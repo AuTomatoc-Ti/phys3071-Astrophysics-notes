@@ -1,0 +1,187 @@
+% ╔══════════════════════════════════════════════════════════════════════════════╗
+% ║  PHYS3071 · Astrophysics — Textbook Template                                ║
+% ║  Compile:  cd phys3071/  &&  ./compile.sh                                   ║
+% ║  Or:       pdflatex main → bibtex main → pdflatex main → pdflatex main     ║
+% ╚══════════════════════════════════════════════════════════════════════════════╝
+
+\documentclass[12pt, a4paper, openright]{report}
+
+\input{preamble}
+
+% ══════════════════════════════════════════════════════════════════════════════
+\begin{document}
+\pagestyle{empty}
+
+% ─── Title Page ────────────────────────────────────────────────────────────────
+\begin{tikzpicture}[remember picture, overlay]
+  % Solid dark background
+  \fill[TitleBG] (current page.south west) rectangle (current page.north east);
+
+  % ══════════════════════════════════════════════════════════════════════════
+  %  Celestial motif — orbital rings, constellation, starfield
+  %  NOTE: shifted to current page.south west so (0,0) = bottom-left page corner
+  % ══════════════════════════════════════════════════════════════════════════
+  \begin{scope}[shift={(current page.south west)}]
+
+  \coordinate (Center) at (10.5cm, 17.5cm);
+
+  % ── Subtle radial glow ──────────────────────────────────────────────────
+  \fill[StarGold, opacity=0.07] (Center) circle (3.5cm);
+  \fill[StarGold, opacity=0.04] (Center) circle (5.5cm);
+  \fill[StarGold, opacity=0.02] (Center) circle (8.0cm);
+
+  % ── Orbital rings ───────────────────────────────────────────────────────
+  \draw[StarGold, opacity=0.15, line width=0.8pt] (Center) circle (6.8cm);
+  \draw[StarGold, opacity=0.08, line width=0.4pt] (Center) circle (7.5cm);
+  \draw[NebulaTeal, opacity=0.12, line width=0.6pt] (Center) circle (4.8cm);
+  \draw[StarGold, opacity=0.18, line width=0.4pt] (Center) circle (2.8cm);
+  \draw[StarGold, opacity=0.08, line width=0.3pt, rotate=22]
+    (Center) ellipse (5.2cm and 2.8cm);
+  \draw[NebulaTeal, opacity=0.07, line width=0.3pt, rotate=-18]
+    (Center) ellipse (3.8cm and 2.0cm);
+
+  % ── Constellation: Ursa Major (Big Dipper) ──────────────────────────────
+  \coordinate (D1) at ( 3.0cm, 26.8cm);
+  \coordinate (D2) at ( 5.0cm, 25.8cm);
+  \coordinate (D3) at ( 7.2cm, 26.5cm);
+  \coordinate (D4) at ( 9.5cm, 27.5cm);
+  \coordinate (D5) at (11.8cm, 28.2cm);
+  \coordinate (D6) at (14.0cm, 27.6cm);
+  \coordinate (D7) at (16.0cm, 26.0cm);
+  \draw[StarGold, opacity=0.25, line width=0.3pt]
+    (D1) -- (D2) -- (D3) -- (D4) -- (D5) -- (D6) -- (D7);
+  \draw[StarGold, opacity=0.18, line width=0.2pt] (D2) -- (D4);
+  \foreach \p/\s/\op in {
+    D1/2.2/0.85, D2/1.8/0.75, D3/1.6/0.70,
+    D4/2.4/0.90, D5/2.6/0.95, D6/2.0/0.80, D7/2.2/0.85
+  }{ \fill[white, opacity=\op] (\p) circle (\s pt); }
+
+  % ── Constellation: Orion (simplified) ───────────────────────────────────
+  \coordinate (O1) at (15.5cm, 22.8cm);
+  \coordinate (O2) at (17.0cm, 21.2cm);
+  \coordinate (O3) at (15.8cm, 20.0cm);
+  \coordinate (O4) at (16.2cm, 19.6cm);
+  \coordinate (O5) at (16.6cm, 19.2cm);
+  \coordinate (O6) at (16.0cm, 17.8cm);
+  \coordinate (O7) at (17.5cm, 17.0cm);
+  \draw[StarGold, opacity=0.20, line width=0.25pt]
+    (O1) -- (O2) -- (O7) -- (O6) -- (O1);
+  \draw[StarGold, opacity=0.20, line width=0.25pt]
+    (O3) -- (O4) -- (O5);
+  \draw[StarGold, opacity=0.12, line width=0.15pt]
+    (O1) -- (O3) (O2) -- (O5);
+  \draw[StarGold, opacity=0.12, line width=0.15pt]
+    (O6) -- (O3) (O7) -- (O5);
+  \fill[StarGold, opacity=0.80] (O1) circle (2.6pt);
+  \fill[white, opacity=0.80]    (O2) circle (2.0pt);
+  \fill[white, opacity=0.70]    (O3) circle (1.6pt);
+  \fill[white, opacity=0.70]    (O4) circle (1.6pt);
+  \fill[white, opacity=0.70]    (O5) circle (1.6pt);
+  \fill[white, opacity=0.60]    (O6) circle (1.4pt);
+  \fill[StarGold, opacity=0.70] (O7) circle (2.4pt);
+
+  % ── Field stars ─────────────────────────────────────────────────────────
+  \foreach \x/\y/\s/\op in {
+    2.0/15.0/1.6/0.70,  5.2/12.8/1.4/0.60,  7.8/10.5/1.8/0.55,
+    12.5/12.0/1.2/0.75, 17.8/14.5/1.6/0.65, 19.2/11.0/1.0/0.80,
+    1.5/ 8.0/1.2/0.50,  4.0/ 6.5/1.6/0.45,  8.5/ 4.2/1.4/0.55,
+    13.0/ 5.5/1.0/0.70, 16.5/ 3.0/1.8/0.50, 19.8/ 7.5/1.2/0.65,
+    2.8/19.0/1.0/0.80, 18.5/20.0/1.4/0.60
+  }{ \fill[white, opacity=\op] (\x cm, \y cm) circle (\s pt); }
+
+  \foreach \x/\y/\s in {
+    0.8/20.5/0.4,  3.2/21.0/0.3,  6.5/22.5/0.5, 10.0/20.8/0.3,
+    14.2/21.5/0.4, 19.0/22.0/0.3, 20.5/18.5/0.5,  1.2/13.0/0.3,
+    3.8/11.5/0.4,   6.0/16.0/0.3,  9.5/15.0/0.5, 11.0/ 8.5/0.3,
+    14.8/ 9.5/0.4, 20.0/14.0/0.3,  0.5/ 5.0/0.4,  7.0/ 1.8/0.3,
+    11.5/ 2.5/0.4, 18.0/ 1.5/0.3, 15.5/ 7.0/0.4,  4.5/ 3.5/0.3,
+    9.0/18.5/0.4, 17.5/16.0/0.3,  1.8/ 3.0/0.4, 13.5/14.5/0.3,
+    6.8/ 4.8/0.4, 19.5/ 4.0/0.3
+  }{ \fill[white, opacity=0.30] (\x cm, \y cm) circle (\s pt); }
+
+  \end{scope}
+
+  % ── Horizontal gold accent bars (keep using current page directly) ──────
+  \draw[StarGold, line width=1.4pt]
+    ([shift={(2.0cm,-12.5cm)}]current page.north west) --
+    ([shift={(-2.0cm,-12.5cm)}]current page.north east);
+  \draw[StarGold!35, line width=0.5pt]
+    ([shift={(2.0cm,-12.72cm)}]current page.north west) --
+    ([shift={(-2.0cm,-12.72cm)}]current page.north east);
+\end{tikzpicture}
+
+\null\vspace*{5.5cm}
+
+\begin{center}
+  {\small\color{StarGold}\textsc{\large PHYS3071}}\\[1.6em]
+  {\fontsize{36}{44}\selectfont\bfseries\color{white}Astrophysics}\\[2.0em]
+  {\color{StarGold!55}\rule{6.0cm}{0.6pt}}\\[1.6em]
+  {\color{white!65}\normalsize Course Notes}\\[4.0em]
+\end{center}
+
+\vfill
+
+\begin{center}
+  {\small\color{white!50}Author: \textit{\NoteAuthor}}\\[0.3em]
+  {\small\color{white!50}Compiled: \textit{\CompileDate}}
+
+  {
+    \vspace*{1em}
+    \small \color{white!50}
+    Licensed under \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA 4.0}.\\
+    \vspace{0.5em}
+  }
+\end{center}
+
+\clearpage
+\pagestyle{fancy}
+
+% ─── Table of Contents ────────────────────────────────────────────────────────
+\phantomsection
+\begin{center}
+  {\color{StarGold}\rule{0.4\textwidth}{0.5pt}}
+\end{center}
+\vspace{0.8cm}
+{\centering\Large\bfseries\color{DeepSpace}TABLE OF CONTENTS\par}
+\vspace{0.8cm}
+\begin{center}
+  {\color{StarGold}\rule{0.4\textwidth}{0.5pt}}
+\end{center}
+\vspace{1.2cm}
+{%
+  \hypersetup{linkcolor=DeepSpace}%
+  \makeatletter\@starttoc{toc}\makeatother
+}
+\clearpage
+
+% ─── Chapters ─────────────────────────────────────────────────────────────────
+\input{chapters/intro}
+% Add your chapter files here as you write them:
+% \input{chapters/ch01_...}
+% \input{chapters/ch02_...}
+% ...
+
+% ─── Appendices ───────────────────────────────────────────────────────────────
+\appendix
+\input{chapters/appendix}
+
+% ─── References ───────────────────────────────────────────────────────────────
+\clearpage
+
+\begin{center}
+  {\color{StarGold}\rule{0.4\textwidth}{0.5pt}}
+\end{center}
+\vspace{0.8cm}
+{\centering\Large\bfseries\color{DeepSpace}REFERENCES\par}
+\vspace{0.8cm}
+\begin{center}
+  {\color{StarGold}\rule{0.4\textwidth}{0.5pt}}
+\end{center}
+\vspace{1.2cm}
+
+\nocite{*}
+\phantomsection\label{bibliography}
+\printbibliography[heading=none]
+
+% ══════════════════════════════════════════════════════════════════════════════
+\end{document}
