@@ -30,6 +30,39 @@
       \field{year}{2026}
       \true{nocite}
     \endentry
+    \entry{phillips1994}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=3b6ce027bb5bb66391fd99b5cf521fe5}{%
+           family={Phillips},
+           familyi={P\bibinitperiod},
+           given={Anthony\bibnamedelima C.},
+           giveni={A\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Chichester}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{fullhash}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{fullhashraw}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{bibnamehash}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{authorbibnamehash}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{authornamehash}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{authorfullhash}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \strng{authorfullhashraw}{3b6ce027bb5bb66391fd99b5cf521fe5}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{1st}
+      \field{isbn}{978-0-471-94057-9}
+      \field{series}{Manchester Physics Series}
+      \field{title}{The Physics of Stars}
+      \field{year}{1994}
+      \true{nocite}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
