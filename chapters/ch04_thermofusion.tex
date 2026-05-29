@@ -4,13 +4,38 @@ Recall that there are three primary energy sources in stars: gravitational contr
 
 In this chapter, we will focus on the process of thermonuclear fusion, which is the viable long-term stellar energy source in most stars.
 
+\section{Nuclear Basics}
+
+\subsection{Nuclear Size and Binding Energy}
+\begin{theory}
+\begin{align}
+    R &= R_0A^{1/3}, \qquad R_0\approx1.2\times10^{-15}\,\text{m}, \\
+    BE(Z,N) &= \left[Zm_p+Nm_n-M(Z,N)\right]c^2.
+\end{align}
+Binding energy per nucleon increases for light nuclei and decreases for very heavy nuclei due to Coulomb repulsion.
+\end{theory}
+
+\subsection{Why Fusion Powers Stars}
+\begin{intuition}
+Stars gain energy when fusing light nuclei toward higher binding energy per nucleon.
+This trend reverses near iron, where further fusion is endothermic.
+\end{intuition}
 
 \section{Hydrogen and Helium Burning}
+\subsection{Proton-Proton (pp) Chain}
 
+\begin{foundation}
+Representative net reaction:
+\begin{equation}
+    4\,{}^1\text{H}\rightarrow{}^4\text{He}+2e^++2\nu_e+\text{energy}.
+\end{equation}
+Total released energy is about $26.7\,$MeV, with part carried away by neutrinos.
+\end{foundation}
 
 \section{Barrier Penetration and Reaction Rates}
 
 \subsection{Coulomb Barrier and Tunneling}
+Derivation
 
 \begin{foundation}
 The \textbf{Gamov energy} is the minimum kinetic energy that two nuclei must have in order to overcome the Coulomb barrier and undergo fusion. It is given by the formula:
@@ -28,3 +53,14 @@ Quantum tunneling gives non-zero penetration probability $P$ for $E<V_C$. The pr
 \end{equation}
 where $E_G$ is the Gamow energy.
 \end{foundation}
+
+\section{Thermonuclear Reaction Rates}
+
+\begin{theory}
+\begin{equation}
+    \langle\sigma v\rangle = \left(\frac{8}{\pi\mu}\right)^{1/2}
+    \frac{1}{(k_BT)^{3/2}}\int_0^\infty S(E)
+    \exp\left[-\frac{E}{k_BT}-\sqrt{\frac{E_G}{E}}\right]dE.
+\end{equation}
+The integrand peaks at the Gamow energy window, balancing high-energy tail abundance and tunneling probability.
+\end{theory}
