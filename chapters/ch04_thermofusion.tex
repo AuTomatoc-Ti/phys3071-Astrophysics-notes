@@ -32,6 +32,9 @@ Representative net reaction:
 Total released energy is about $26.7\,$MeV, with part carried away by neutrinos.
 \end{foundation}
 
+\section{CNO Cycle}
+
+
 \section{Barrier Penetration and Reaction Rates}
 
 \subsection{Coulomb Barrier and Tunneling}
@@ -49,7 +52,7 @@ where $m_r$ is the reduced mass of the two nuclei, $\alpha$ is the fine-structur
 Classically, nuclei with $E<V_C$ cannot fuse.
 Quantum tunneling gives non-zero penetration probability $P$ for $E<V_C$. The probability of tunneling through the Coulomb barrier can be approximated by the formula:
 \begin{equation}
-    P \sim \exp\left[-\sqrt{\frac{E_G}{E}}\right],
+    P \propto \exp\left[-\sqrt{\frac{E_G}{E}}\right],
 \end{equation}
 where $E_G$ is the Gamow energy.
 \end{foundation}
@@ -63,4 +66,12 @@ where $E_G$ is the Gamow energy.
     \exp\left[-\frac{E}{k_BT}-\sqrt{\frac{E_G}{E}}\right]dE.
 \end{equation}
 The integrand peaks at the Gamow energy window, balancing high-energy tail abundance and tunneling probability.
+\end{theory}
+
+
+\begin{theory}
+\begin{equation}
+    R_{AB} \propto T^{a}
+\end{equation}
+where $a = \sqrt[3]{\frac{E_G}{4kT}}$ is a positive exponent that depends on the specific reaction and the temperature range.
 \end{theory}
