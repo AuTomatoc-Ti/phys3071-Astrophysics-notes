@@ -4,6 +4,96 @@
 \chapter{Basic Concepts in Astrophysics}
 
 
+\section{Observational Foundations}
+
+\subsection{Specific Intensity, Flux, and Luminosity}
+\begin{intuition}
+Observed starlight is measured in layers: direction-resolved intensity, surface flux, and finally total emitted power.
+Keeping these definitions separate avoids unit mistakes in later derivations.
+\end{intuition}
+
+\begin{theory}
+\begin{itemize}
+    \item Specific intensity $I_\nu$:
+    \begin{equation}
+        dE = I_\nu \cos\theta \, dA \, dt \, d\nu \, d\Omega
+    \end{equation}
+    \item Monochromatic flux density:
+    \begin{equation}
+        F_\nu = \int I_\nu \cos\theta \, d\Omega
+    \end{equation}
+    \item Bolometric flux:
+    \begin{equation}
+        F = \int_0^\infty F_\nu \, d\nu
+    \end{equation}
+    \item Luminosity:
+    \begin{equation}
+        L = \int F \, dA
+    \end{equation}
+\end{itemize}
+\end{theory}
+
+\begin{importantnote}
+$I_\nu$ is invariant along a ray in vacuum (no absorption/emission), while $F_\nu$ depends on source geometry and distance.
+Do not interchange them in magnitude or distance calculations.
+\end{importantnote}
+
+\subsection{Magnitude System and Distance Modulus}
+\begin{theory}
+\begin{align}
+    M_1 - M_2 &= -2.5 \log_{10}\left(\frac{L_1}{L_2}\right), \\
+    m_1 - m_2 &= -2.5 \log_{10}\left(\frac{F_1}{F_2}\right), \\
+    m - M &= 5 \log_{10}(d/\text{pc}) - 5, \\
+    F &= \frac{L}{4\pi d^2}.
+\end{align}
+\end{theory}
+
+\begin{example}{Distance modulus quick use}{ex:distmod}
+A star has $m=9.0$ and $M=4.0$. Estimate its distance.
+
+\smallskip\textbf{Solution.}
+\begin{align*}
+m-M &= 5\log_{10}(d/\text{pc})-5 = 5 \\
+\Rightarrow \log_{10}(d/\text{pc}) &= 2 \\
+\Rightarrow d &= 10^2\,\text{pc} = 100\,\text{pc}.
+\end{align*}
+\end{example}
+
+
+\subsection{Parallax and Radius}
+\begin{theory}
+\begin{itemize}
+    \item Parallax distance:
+    \begin{equation}
+        d(\text{pc}) = \frac{1}{\pi(\text{arcsec})}
+    \end{equation}
+    \item Radius from angular diameter $\theta$:
+    \begin{equation}
+        R = \frac{1}{2}\theta d
+    \end{equation}
+\end{itemize}
+\end{theory}
+\begin{example}{}{ex:distmod2}
+From the previous example, if the star has an angular diameter of $0.01$ arcseconds, estimate its radius in units of $R_\odot$.
+
+\smallskip\textbf{Solution.}
+\begin{align*}
+R &= \frac{1}{2}\theta d = \frac{1}{2} \times 0.01'' \times 100\,\text{pc} \\
+&= 0.5 \times 0.01 \times 100 \times 206265\,\text{AU} \\
+&= 1031.325\,\text{AU} \\   
+&= 1031.325 \times 215 R_\odot \\
+&\approx 221,000 R_\odot.
+\end{align*}
+\end{example}
+
+
+
+\section{Hydrostatic Equilibrium}
+\begin{foundation}
+Assume spherical symmetry and radial dependence only.
+Neglect rotation, magnetic fields, and turbulence in the first model to isolate gravity-versus-pressure physics.
+\end{foundation}
+
 % ═════════════════════════════════════════════════════════════════════════════ 
 \section{Stars and Stellar Properties}
 \begin{foundation}

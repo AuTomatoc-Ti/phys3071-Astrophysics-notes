@@ -20,6 +20,18 @@ In this chapter, we will focus on the process of thermonuclear fusion, which is 
 Binding energy per nucleon increases for light nuclei and decreases for very heavy nuclei due to Coulomb repulsion.
 \end{theory}
 
+\begin{example}{}{ex:binding}
+Calculate the binding energy per nucleon for helium-4 ($^4$He) and $^{12}$C.
+
+\smallskip\textbf{Solution.}
+\begin{align*} 
+BE(^4\text{He}) &= \left[2m_p + 2m_n - M(^4\text{He})\right]c^2 \approx 28.3\,\text{MeV}, \\
+BE(^4\text{He})/4 &\approx 7.1\,\text{MeV/nucleon}, \\
+BE(^{12}\text{C}) &= \left[6m_p + 6 m_n - M(^{12}\text{C})\right]c^2 \approx 92.2\,\text{MeV}, \\
+BE(^{12}\text{C})/12 &\approx 7.7\,\text{MeV/nucleon}.
+\end{align*}   
+\end{example}
+
 \subsection{Why Fusion Powers Stars}
 \begin{intuition}
 Stars gain energy when fusing light nuclei toward higher binding energy per nucleon.
@@ -27,7 +39,7 @@ This trend reverses near iron, where further fusion is endothermic.
 \end{intuition}
 
 \section{Hydrogen and Helium Burning}
-\subsection{Proton-Proton (pp) Chain}
+\subsection{Proton-Proton (p-p) Chain}
 
 \begin{foundation}
 Representative net reaction:
@@ -52,6 +64,45 @@ E_G = (\pi \alpha Z_1 Z_2)^2 2 m_{r}c^2
 \end{equation} 
 where $m_r$ is the reduced mass of the two nuclei, $\alpha$ is the fine-structure constant, and $Z_1$ and $Z_2$ are the atomic numbers of the two nuclei.
 \end{foundation}
+\begin{example}{The fusion of two protons}{ex:gamov1}
+Calculate the Gamov energy $E_G$ for the fusion of two protons.
+
+\smallskip\textbf{Solution.}
+For two protons, we have $Z_1 = Z_2 = 1$ and the reduced mass $m_r$ is approximately equal to the mass of a proton, $m_p$. The fine-structure constant $\alpha$ is approximately $1/137$. Plugging these values into the formula for the Gamov energy, we get:
+\begin{align*}
+E_G &= (\pi \alpha Z_1 Z_2)^2 2 m_{r}c^2 \\
+&= (\pi \times \frac{1}{137} \times 1 \times 1)^2 \times 2 m_p c^2 \\
+&= \left(\frac{\pi}{137}\right)^2 \times 2 m_p c^2 \\
+&\approx 493\,\text{keV}.
+\end{align*}
+Thus, the Gamov energy for the fusion of two protons is approximately $493\,\text{keV}$.
+\end{example}
+
+\begin{example}{The fusion of carbon and oxygen}{ex:gamov2}
+Calculate the Gamov energy $E_G$ for the fusion of carbon-12 ($^{12}\text{C}$) and oxygen-16 ($^{16}\text{O}$). 
+
+\smallskip\textbf{Solution.}
+For carbon-12, we have $Z_1 = 6$ and for oxygen-16, we have $Z_2 = 8$. The reduced mass $m_r$ can be calculated using the formula:
+\begin{equation}
+m_r = \frac{m_1 m_2}{m_1 + m_2},
+\end{equation}
+where $m_1$ and $m_2$ are the masses of the carbon and oxygen nuclei, respectively. The mass of carbon-12 is approximately $12 m_p$ and the mass of oxygen-16 is approximately $16 m_p$. Thus, we have:
+\begin{align*}
+m_r &= \frac{(12 m_p)(16 m_p)}{12 m_p + 16 m_p} \\
+&= \frac{192 m_p^2}{28 m_p} \\        
+&= \frac{192}{28} m_p \\
+&\approx 6.86 m_p.
+\end{align*}
+Now we can calculate the Gamov energy using the formula:
+\begin{align*}
+E_G &= (\pi \alpha Z_1 Z_2)^2 2 m_{r}c^2 \\
+&= (\pi \times \frac{1}{137} \times 6 \times 8)^2 \times 2 \times 6.86 m_p c^2 \\
+&= \left(\frac{48\pi}{137}\right)^2 \times 2 \times 6.86 m_p c^2 \\
+&\approx 8.7\,\text{MeV}. 
+\end{align*}
+Thus, the Gamov energy for the fusion of carbon-12 and oxygen-16 is approximately $8.7\,\text{MeV}$.
+\end{example}
+
 
 \begin{foundation}
 Classically, nuclei with $E<V_C$ cannot fuse.
@@ -80,3 +131,18 @@ The integrand peaks at the Gamow energy window, balancing high-energy tail abund
 \end{equation}
 where $a = \sqrt[3]{\frac{E_G}{4kT}}$ is a positive exponent that depends on the specific reaction and the temperature range.
 \end{theory}
+
+\begin{example}{}{ex:ppchain}
+Calculate the temperature dependence of the proton-proton (p-p) chain reaction rate.
+
+\smallskip\textbf{Solution.}
+The proton-proton chain reaction has a Gamow energy of approximately $E_G \approx 493\,\text{keV}$. The temperature dependence can be approximated by:
+\begin{equation}
+    R_{pp} \propto T^{\sqrt[3]{\frac{E_G}{4kT}}}.           
+\end{equation}
+At typical stellar core temperatures of around $T \approx 1.5 \times 10^7\,\text{K}$, the exponent $a$ can be calculated as:
+\begin{equation}
+    a = \sqrt[3]{\frac{493\,\text{keV}}{4k(1.5 \times 10^7\,\text{K})}} \approx 4.5.    
+\end{equation}
+Thus, the reaction rate for the proton-proton chain scales approximately as $R_{pp} \propto T^{4.5}$ at typical stellar core temperatures.
+\end{example}
