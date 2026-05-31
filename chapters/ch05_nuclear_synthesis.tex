@@ -9,7 +9,7 @@ Recall that there are three primary energy sources in stars: gravitational contr
 
 In this chapter, we will focus on the process of thermonuclear fusion, which is the viable long-term stellar energy source in most stars.
 
-\section{Nuclear Basics}
+\section{Requisites for Thermonuclear Fusion}
 
 \subsection{Nuclear Size and Binding Energy}
 \begin{theory}
@@ -46,16 +46,37 @@ Representative net reaction:
 \begin{equation}
     4\,{}^1\text{H}\rightarrow{}^4\text{He}+2e^++2\nu_e+\text{energy}.
 \end{equation}
-Total released energy is about $26.7\,$MeV, with part carried away by neutrinos.
 \end{foundation}
+
+\begin{example}{}{ex:ppchain}
+Calculate the energy released in the proton-proton chain reaction.
+
+\smallskip\textbf{Solution.}
+The net reaction for the proton-proton chain is:    
+\begin{equation}
+    4\,{}^1\text{H}\rightarrow{}^4\text{He}+2e^++2\nu_e+\text{energy}.  
+\end{equation}
+The energy released can be calculated using the mass difference between the reactants and products:
+\begin{align*}
+\Delta m &= 4m_p - m_{^4\text{He}} - 2m_e \\
+&\approx 4 \times 1.007276\,\text{u} - 4.002603\,\text{u} - 2 \times 0.0005486\,\text{u} \\
+&\approx 0.0287\,\text{u}.  
+\end{align*}
+Converting this mass difference to energy using $E = \Delta m c^2$ and
+knowing that $1\,\text{u} \approx 931.5\,\text{MeV}/c^2$, we get:
+\begin{align*}
+E &= 0.0287\,\text{u} \times 931.5\,\text{MeV}/\text{u} \\
+&\approx 26.7\,\text{MeV}.
+\end{align*}
+Thus, the energy released in the proton-proton chain reaction is approximately $26.7\,\text{MeV}$ and carried away by neutrinos.
+\end{example}
 
 \section{CNO Cycle}
 
 
-\section{Barrier Penetration and Reaction Rates}
+\section{Thermonuclear Reaction Rates}
 
 \subsection{Coulomb Barrier and Tunneling}
-Derivation
 
 \begin{foundation}
 The \textbf{Gamov energy} is the minimum kinetic energy that two nuclei must have in order to overcome the Coulomb barrier and undergo fusion. It is given by the formula:
@@ -105,7 +126,12 @@ Thus, the Gamov energy for the fusion of carbon-12 and oxygen-16 is approximatel
 
 
 \begin{foundation}
-Classically, nuclei with $E<V_C$ cannot fuse.
+The electrostatic interaction (Coulomb barrier) between two positively charged nuclei is given by:
+\begin{equation}
+V_C(r) = \frac{Z_1 Z_2 e^2}{4\pi \epsilon_0 r}.
+\end{equation}
+Classically, nuclei with $E<V_C$ cannot fuse as they do not have enough kinetic energy to overcome the Coulomb barrier.
+
 Quantum tunneling gives non-zero penetration probability $P$ for $E<V_C$. The probability of tunneling through the Coulomb barrier can be approximated by the formula:
 \begin{equation}
     P \propto \exp\left[-\sqrt{\frac{E_G}{E}}\right],

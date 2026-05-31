@@ -16,6 +16,15 @@ In below contents, we will use the $E(p)$ notation to represent the energy of a 
         E(\vec{p}) = \sqrt{|\vec{p}|^2c^2 + m^2c^4}.
     \]
     Taken $c = 1$ and $p = |\vec{p}|$, we have $E(p) = \sqrt{p^2 + m^2}$. \\
+\section{Statistical Distributions}
+
+\begin{theory}
+\begin{align}   
+\text{Maxwell-Boltzmann}: \quad f_{\text{MB}}(E) &= \frac{2\pi}{(k_B T)^{3/2}} \sqrt{E} e^{-E/k_B T}, \\
+\text{Fermi-Dirac}: \quad f_{\text{FD}}(E) &= \frac{1}{e^{(E-\mu)/k_B T} + 1}, \\
+\text{Bose-Einstein}: \quad f_{\text{BE}}(E) &= \frac{1}{e^{(E-\mu)/k_B T} - 1}.
+\end{align}
+\end{theory}
 
     In a Non-relativistic limit ($p \ll m$):
     \[
@@ -389,4 +398,13 @@ P &= P(\rho, T, \{X_i\}), \\
 \text{Degenerate gas}: \quad P_{\text{deg}} &\propto \rho^{5/3} \quad \text{(non-relativistic)}, \\
 P_{\text{deg}} &\propto \rho^{4/3} \quad \text{(relativistic)}.
 \end{align}
+\end{theory}
+
+\section{Radiation}
+\begin{theory}
+\begin{align}
+u_{\text{rad}} &= aT^4, \\  
+F_{\text{rad}} &= \frac{c}{4}u_{\text{rad}} = \sigma T^4, \\
+L_{\text{rad}} &= 4\pi R^2 F_{\text{rad}} = 4\pi R^2 \sigma T^4.
+\end{align} 
 \end{theory}
