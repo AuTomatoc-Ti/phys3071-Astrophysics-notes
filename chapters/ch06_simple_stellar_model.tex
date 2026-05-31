@@ -1,6 +1,47 @@
 % ══════════════════════════════════════════════════════════════════════════════
 %  CHAPTER 6: SIMPLE STELLAR MODELS
 % ══════════════════════════════════════════════════════════════════════════════
-\chapter{Simple Stellar Models}
+\chapter{Stellar Models}
 
-% ═════════════════════════════════════════════════════════════════════════════ 
+% ═════════════════════════════════════════════════════════════════════════════
+\section{Stellar Structure Models} 
+Main assumptions are made in simple stellar models:
+\begin{itemize}
+    \item The star is in hydrostatic equilibrium.
+    \item The star is in thermal equilibrium.
+    \item The star is spherically symmetric.
+    \item The star is non-rotating and has no magnetic fields.
+    \item The star is composed of an ideal gas.
+\end{itemize}
+\begin{theory}
+These assumptions allow us to derive the basic equations governing the structure of stars, such as the equations of hydrostatic equilibrium, mass conservation, energy generation, and energy transport. While these models are simplified, they provide valuable insights into the fundamental properties and behaviors of stars.
+\begin{align}
+\text{Mass conservation}: \quad &\frac{dm(r)}{dr} = 4\pi r^2 \rho(r) \\
+\text{Hydrostatic equilibrium}: \quad &\frac{dP}{dr} = -\frac{G M(r) \rho(r)}{r^2} \\
+\text{Thermal equilibrium}: \quad &L(r) = \int_0^r 4\pi r'^2 \rho(r') \epsilon(r') dr' \\
+\text{Energy transport}: \quad &\frac{dT}{dr} = -\frac{3 \kappa(r) \rho(r) L(r)}{16\pi a c T^3 r^2}
+\end{align}
+\end{theory}
+
+
+\begin{theory}
+By expressing the stellar structure equations in terms of mass $m$ instead of radius $r$, we can derive a set of equations that are often more convenient for numerical integration. The equations become:
+\begin{align}
+\frac{dr}{dm} &= \frac{1}{4\pi r^2 \rho} \\
+\frac{dP}{dm} &= -\frac{G m}{4\pi r^4} \\
+\frac{dL}{dm} &= \epsilon \\
+\frac{dT}{dm} &= -\frac{3 \kappa L}{16\pi a c T^3 r^4}
+\end{align}
+\end{theory}
+
+\subsection{Mass Range of Stars}
+The mass range of stars is typically defined as follows:
+\begin{itemize}
+    \item \textbf{Low-mass stars}: $M < 0.5 M_\odot$ (e.g., red dwarfs)
+    \item \textbf{Intermediate-mass stars}: $0.5 M_\odot < M < 8 M_\odot$ (e.g., Sun-like stars)
+    \item \textbf{High-mass stars}: $M > 8 M_\odot$ (e.g., O and B type stars)  
+    \item \textbf{Brown dwarfs}: $M < 0.08 M_\odot$ (substellar objects that do not sustain hydrogen fusion)
+\end{itemize}
+
+
+
