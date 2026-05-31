@@ -25,6 +25,20 @@ The \textbf{Tolman-Oppenheimer-Volkoff (TOV) equation} describes the structure o
 where $P(r)$ is the pressure, $\rho(r)$ is the energy density, $m(r)$ is the mass enclosed within radius $r$, $G$ is the gravitational constant, and $c$ is the speed of light. This equation is crucial for modeling neutron stars and other compact objects where relativistic effects are significant.
 \end{theory}
 
+\begin{example}{Newtonian Limit of the TOV Equation}{ex:tov_newtonian_limit}
+Show that in the Newtonian limit, the TOV equation reduces to the Lane-Emden equation for a polytropic fluid.
+
+\smallskip\textbf{Solution.} In the Newtonian limit, we assume that the pressure is much less than the energy density ($P \ll \rho c^2$) and that the gravitational field is weak ($\frac{2Gm(r)}{rc^2} \ll 1$). Under these assumptions, the TOV equation simplifies to:
+\begin{equation}
+\frac{dP(r)}{dr} \approx -\frac{G \rho(r) m(r)}{r^2}
+\end{equation}
+This is the hydrostatic equilibrium equation in Newtonian gravity. For a polytropic fluid, we can express the pressure as a function of density:
+\begin{equation}
+P = K \rho^{1 + \frac{1}{n}}
+\end{equation}
+where $K$ is a constant and $n$ is the polytropic index. Substituting this into the hydrostatic equilibrium equation and introducing dimensionless variables leads to the Lane-Emden equation, which describes the structure of polytropic stars in Newtonian gravity.  
+\end{example}
+
 \subsection{Pulsars/X-ray Brusters}
 
 

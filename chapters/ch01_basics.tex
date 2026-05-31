@@ -200,54 +200,7 @@ Stars are classified into spectral types O, B, A, F, G, K, M based on their surf
 Each spectral type corresponds to a specific range of surface temperatures, which can be used to estimate $T_{\text{eff}}$ if the spectral type is known.
 \end{theory}
 
-\section{Star Formation}
 
-\subsection{Hydrostatic Equilibrium}
-\begin{foundation}
-Assume spherical symmetry and radial dependence only.
-Neglect rotation, magnetic fields, and turbulence in the first model to isolate gravity-versus-pressure physics.
-\end{foundation}
-
-\begin{theory}
-\begin{align}
-    dm(r,t) &= 4\pi r^2\rho\,dr, \\
-    \frac{\partial m}{\partial t}+v\frac{\partial m}{\partial r} &= 0, \\
-    \frac{dP}{dr} &= -\frac{Gm(r)\rho}{r^2} = -\rho g.
-\end{align}
-\end{theory}
-
-\begin{example}{}{ex:hydrostatic}
-Consider a sphere of mass $M$ and radius $R$ with a uniform density $\rho$.
-    \begin{enumerate}[label=(\alph*)]
-        \item Write the pressure gradient $-\dfrac{dP}{dr}$ at distance $r$ from the center at hydrostatic equilibrium.
-        \item Calculate the pressure $P(r)$ at distance $r$ from the center.
-    \end{enumerate}
-
-\smallskip\textbf{Solution.}
-\begin{enumerate}[label=(\alph*)]
-    \item The mass enclosed within radius $r$ is given by:
-    \begin{equation}
-        m(r) = \frac{4}{3}\pi r^3 \rho.
-    \end{equation}
-    The hydrostatic equilibrium equation is:
-    \begin{equation}
-        -\frac{dP}{dr} = \frac{G m(r) \rho}{r^2}.
-    \end{equation}
-    Substituting $m(r)$, we get:
-    \begin{equation}
-        -\frac{dP}{dr} = \frac{G \left(\frac{4}{3}\pi r^3 \rho\right) \rho}{r^2} = \frac{4\pi G}{3} r \rho^2.
-    \end{equation}
-    
-    \item To find $P(r)$, we integrate the pressure gradient from the surface ($r=R$, where $P(R)=0$) to a point inside the sphere:
-    \begin{align*}
-        P(r) &= -\int_r^R -\frac{dP}{dr'} dr' = \int_r^R \frac{4\pi G}{3} r' \rho^2 dr' \\
-        &= \frac{4\pi G}{3} \rho^2 \int_r^R r' dr' = \frac{4\pi G}{3} \rho^2 \left[\frac{r'^2}{2}\right]_r^R \\
-        &= \frac{4\pi G}{3} \rho^2 \left(\frac{R^2 - r^2}{2}\right) = 2\pi G \rho^2 (R^2 - r^2).
-    \end{align*}
-\end{enumerate}
-\end{example}
-
-\section{Virial Theorem and Jeans Criterion}
 
 
 
