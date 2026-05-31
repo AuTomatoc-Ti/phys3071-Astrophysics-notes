@@ -4,7 +4,15 @@
 \chapter{Thermodynamic Properties of Stars}
 
 % ═════════════════════════════════════════════════════════════════════════════ 
+\section{Statistical Distributions}
 
+\begin{theory}
+\begin{align}   
+f_{\text{MB}}(E) &= \frac{2\pi}{(k_B T)^{3/2}} \sqrt{E} e^{-E/k_B T}, \\
+f_{\text{FD}}(E) &= \frac{1}{e^{(E-\mu)/k_B T} + 1}, \\
+f_{\text{BE}}(E) &= \frac{1}{e^{(E-\mu)/k_B T} - 1}.
+\end{align}
+\end{theory}
 
 \section{Equation of State (EOS) of Stellar Matter}
 \begin{intuition}
@@ -19,4 +27,13 @@ P &= P(\rho, T, \{X_i\}), \\
 \text{Degenerate gas}: \quad P_{\text{deg}} &\propto \rho^{5/3} \quad \text{(non-relativistic)}, \\
 P_{\text{deg}} &\propto \rho^{4/3} \quad \text{(relativistic)}.
 \end{align}
+\end{theory}
+
+\section{Radiation}
+\begin{theory}
+\begin{align}
+u_{\text{rad}} &= aT^4, \\  
+F_{\text{rad}} &= \frac{c}{4}u_{\text{rad}} = \sigma T^4, \\
+L_{\text{rad}} &= 4\pi R^2 F_{\text{rad}} = 4\pi R^2 \sigma T^4.
+\end{align} 
 \end{theory}
