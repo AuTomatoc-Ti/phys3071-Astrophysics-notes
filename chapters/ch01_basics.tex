@@ -24,30 +24,77 @@ The stars are usually of spherical shape due to rotational symmetric force field
 % ---------------------------------------------------------------------------------
 \bigskip\noindent \bigskip\noindent \bigskip\noindent
 \subsection{Distance and Parallax}
-\begin{theory}
-\begin{itemize}
-    \item Parallax distance:
-    \begin{equation}
-        d(\text{pc}) = \frac{1}{\pi(\text{arcsec})}
-    \end{equation}
-    \item Radius from angular diameter $\theta$:
-    \begin{equation}
-        R = \frac{1}{2}\theta d
-    \end{equation}
-\end{itemize}
-\end{theory}
-\begin{example}{}{ex:distmod2}
-From the previous example, if the star has an angular diameter of $0.01$ arcseconds, estimate its radius in units of $R_\odot$.
+\begin{intuition}
+    Parallax is the apparent shift in position of a nearby star against the background of distant stars when observed from different positions (e.g. Earth at different points in its orbit). By measuring this shift, we can determine the distance to the star using simple trigonometry.
+\end{intuition}
 
-\smallskip\textbf{Solution.}
-\begin{align*}
-R &= \frac{1}{2}\theta d = \frac{1}{2} \times 0.01'' \times 100\,\text{pc} \\
-&= 0.5 \times 0.01 \times 100 \times 206265\,\text{AU} \\
-&= 1031.325\,\text{AU} \\   
-&= 1031.325 \times 215 R_\odot \\
-&\approx 221,000 R_\odot.
-\end{align*}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[height=0.3\textheight,width=0.35\textwidth]{images/stellar_parallax.png}
+    \caption{Stellar parallax illustration. The nearby star appears to shift position against the background of distant stars as Earth orbits the Sun. The angle $p$ is the shifted angle actually, instead of the parallex angle $\frac{1}{2}p$.}
+    \label{fig:stellar_parallax}
+\end{figure}
+
+
+\begin{theory}
+    Let x be the baseline (e.g. diameter of Earth's orbit), d be the distance to the star, and $\theta$ be the parallax angle (half of the shifted angle $p$). Then we have:
+    \begin{itemize}
+        \item Parallax distance:
+        \begin{equation}
+            d_{\text{pc}} = \tan^{-1}\left(\frac{x/2}{d}\right) \approx \frac{1 \text{AU}}{\theta_{\text{arcsec}}}
+        \end{equation}
+
+        \item we can also directly calculate the radius of the star if we know its angular radius $\theta$ and distance $d$:
+        \begin{equation}
+            R = d \dot \tan\theta \approx d \theta
+        \end{equation}
+    \end{itemize}
+\end{theory}
+
+\begin{importantnote}
+    Don't mixed up the parallax angle $\theta$ and the shifted angle $p$ in the parallax measurement. The total shifted angle $p$ shows the apparent shift of the star, but when we use the trigonometry to calculate the distance, we need to use the parallax angle $\theta = \frac{1}{2}p$ which is the angle between the line of sight to the star and the line connecting the Earth and the Sun. 
+\end{importantnote}
+
+\begin{example}{}{ex:distmod1}
+    From the previous example, if the star has an angular diameter of $0.01$ arcseconds, estimate its radius in units of $R_\odot$.
+
+    \smallskip\textbf{Solution.}
+    \begin{align*}
+    R &= \frac{1}{2}\theta d = \frac{1}{2} \times 0.01'' \times 100\,\text{pc} \\
+    &= 0.5 \times 0.01 \times 100 \times 206265\,\text{AU} \\
+    &= 1031.325\,\text{AU} \\   
+    &= 1031.325 \times 215 R_\odot \\
+    &\approx 221,000 R_\odot.
+    \end{align*}
 \end{example}
+
+\begin{example}{}{ex:distmod2}
+    Assume a telescope angular resolution of $0.01$ arcseconds. \\
+    (a). what is the maximum distance at which we can resolve a star with a radius of $R_\odot$? \\
+    (b). If baseline $x$ is $2$ AU, what is the maximum distance of a star we can resolve?
+
+    \smallskip\textbf{Solution.}
+    (a). We can use the formula for the radius of the star:
+        \begin{align*}
+            R &\geq d \theta \\
+            d &\leq \frac{R}{\theta} = \frac{R_\odot}{0.01''} \\
+        \end{align*}
+        As $R_\odot \approx 6.957 \times 10^8$ m and $1'' = 4.848 \times 10^{-6}$ radians, we have:
+        \begin{align*}
+            d &\leq \frac{6.957 \times 10^8\,\text{m}}{0.01 \times 4.848 \times 10^{-6}} \\
+            &\approx 1.43 \times 10^{16}\,\text{m} \\
+            &\approx 0.465\,\text{pc}.
+        \end{align*}
+    (b). Using the parallax distance formula:
+        \begin{align*}
+            d &\leq \frac{x/2}{\tan\theta} \approx \frac{1\,\text{AU}}{0.01''} \\
+            &\approx 100\,\text{pc}.
+        \end{align*}
+\end{example}
+
+\begin{remark}
+    As we can see from the above examples, the stellar parallax method is only effective for measuring distances to nearby stars (within a few hundred parsecs). For more distant stars, we need to use other methods such as spectroscopic parallax or standard candles.(we will discuss these methods in later chapters).
+\end{remark}
 
 % ---------------------------------------------------------------------------------
 \bigskip\noindent \bigskip\noindent \bigskip\noindent
