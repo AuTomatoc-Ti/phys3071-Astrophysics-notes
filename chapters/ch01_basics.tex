@@ -35,7 +35,6 @@ The stars are usually of spherical shape due to rotational symmetric force field
     \label{fig:stellar_parallax}
 \end{figure}
 
-
 \begin{theory}
     Let x be the baseline (e.g. diameter of Earth's orbit), d be the distance to the star, and $\theta$ be the parallax angle (half of the shifted angle $p$). Then we have:
     \begin{itemize}
@@ -51,10 +50,12 @@ The stars are usually of spherical shape due to rotational symmetric force field
     \end{itemize}
 \end{theory}
 
+\clearpage
 \begin{importantnote}
     Don't mixed up the parallax angle $\theta$ and the shifted angle $p$ in the parallax measurement. The total shifted angle $p$ shows the apparent shift of the star, but when we use the trigonometry to calculate the distance, we need to use the parallax angle $\theta = \frac{1}{2}p$ which is the angle between the line of sight to the star and the line connecting the Earth and the Sun. 
 \end{importantnote}
 
+\bigskip\noindent
 \begin{example}{}{ex:distmod1}
     From the previous example, if the star has an angular diameter of $0.01$ arcseconds, estimate its radius in units of $R_\odot$.
 
@@ -64,10 +65,10 @@ The stars are usually of spherical shape due to rotational symmetric force field
     &= 0.5 \times 0.01 \times 100 \times 206265\,\text{AU} \\
     &= 1031.325\,\text{AU} \\   
     &= 1031.325 \times 215 R_\odot \\
-    &\approx 221,000 R_\odot.
+    &\approx 221,000 R_\odot
     \end{align*}
 \end{example}
-
+\bigskip\noindent
 \begin{example}{}{ex:distmod2}
     Assume a telescope angular resolution of $0.01$ arcseconds. \\
     (a). what is the maximum distance at which we can resolve a star with a radius of $R_\odot$? \\
@@ -83,15 +84,16 @@ The stars are usually of spherical shape due to rotational symmetric force field
         \begin{align*}
             d &\leq \frac{6.957 \times 10^8\,\text{m}}{0.01 \times 4.848 \times 10^{-6}} \\
             &\approx 1.43 \times 10^{16}\,\text{m} \\
-            &\approx 0.465\,\text{pc}.
+            &\approx 0.465\,\text{pc}
         \end{align*}
     (b). Using the parallax distance formula:
         \begin{align*}
             d &\leq \frac{x/2}{\tan\theta} \approx \frac{1\,\text{AU}}{0.01''} \\
-            &\approx 100\,\text{pc}.
+            &\approx 100\,\text{pc}
         \end{align*}
 \end{example}
 
+%\bigskip\noindent
 \begin{remark}
     As we can see from the above examples, the stellar parallax method is only effective for measuring distances to nearby stars (within a few hundred parsecs). For more distant stars, we need to use other methods such as spectroscopic parallax or standard candles.(we will discuss these methods in later chapters).
 \end{remark}
@@ -99,25 +101,89 @@ The stars are usually of spherical shape due to rotational symmetric force field
 % ---------------------------------------------------------------------------------
 \bigskip\noindent \bigskip\noindent \bigskip\noindent
 \subsection{Brightness, Magnitude, and Luminosity}
+\begin{intuition}
+    The brightness of a star is how bright it appears to us on Earth, in ancient times, it was measured by the naked eye and categorized into 6 magnitudes (1st magnitude being the brightest and 6th magnitude being the faintest). \\
+
+    In modern astronomy, we keep the magnitude system but use more precise definitions and measurements. we define the magnitude system as logarithmic, meaning that a difference of 5 magnitudes corresponds to a factor of 100 in brightness. And the logarithmic scale also allows a star to be brighter than 1st magnitude (e.g. Sirius has a magnitude of -1.46) or fainter than 6th magnitude (e.g. pluto has a magnitude of 14.0).
+\end{intuition}
+
+\bigskip\noindent
 \begin{theory}
-\begin{align}
-    M_1 - M_2 &= -2.5 \log_{10}\left(\frac{L_1}{L_2}\right), \\
-    m_1 - m_2 &= -2.5 \log_{10}\left(\frac{F_1}{F_2}\right), \\
-    m - M &= 5 \log_{10}(d/\text{pc}) - 5, \\
-    F &= \frac{L}{4\pi d^2}.
-\end{align}
+    The apparent magnitude $m$ of a star is defined as:
+    \begin{equation}
+        m = -2.512 \log_{10}\left(\frac{F}{F_0}\right)
+    \end{equation}
+    where $F$ is the observed flux from the star and $F_0$ is a reference flux (the flux of a star with magnitude 0). Some astrophysicists also use $B$ to represent the observed flux as "brightness". And we can write the formula more generally as:
+    \begin{equation}
+        m_1 - m_2 &= -2.512 \log_{10}\left(\frac{F_1}{F_2}\right) \\
+    \end{equation}
+    where $m_1$ and $m_2$ are the apparent magnitudes of two stars, and $F_1$ and $F_2$ are their corresponding fluxes. \\
 \end{theory}
 
-\begin{example}{Distance modulus quick use}{ex:distmod}
-A star has $m=9.0$ and $M=4.0$. Estimate its distance.
+\clearpage
+%\bigskip\noindent
+\begin{intuition}
+    One may ask that a dimmer star closer to us can have the same apparent magnitude as a brighter star farther away. To compare the intrinsic brightness of stars, we need to use the concept of absolute magnitude, which is defined as the apparent magnitude a star would have if it were located at a standard distance of 10 parsecs from Earth.
+\end{intuition}
 
-\smallskip\textbf{Solution.}
-\begin{align*}
-m-M &= 5\log_{10}(d/\text{pc})-5 = 5 \\
-\Rightarrow \log_{10}(d/\text{pc}) &= 2 \\
-\Rightarrow d &= 10^2\,\text{pc} = 100\,\text{pc}.
-\end{align*}
+\bigskip\noindent
+\begin{foundation}
+    The absolute magnitude $M$ of a star is defined as:
+    \[
+        M_2 - M_1 = -2.512 \log_{10}\left(\frac{L_2}{L_1}\right)
+    \]
+    and relationship between flux $F$, luminosity $L$ is:
+    \[
+        F = \frac{L}{4\pi d^2}
+    \]
+    hence we consider the 2 situations:
+    \begin{itemize}
+        \item case 1: star at $10$ pc, we have $m_1 = M_1$ and $F_1 = \frac{L}{4\pi (10\,\text{pc})^2}$
+        \item case 2: same star at distance $d$, we have $m$ and $F_2 = \frac{L}{4\pi d^2}$
+    \end{itemize}
+    Then we can derive the distance modulus formula:
+    \begin{align*}
+        m_2 - m_1 &= -2.512 \log_{10}\left(\frac{F_2}{F_1}\right) \\
+        m_2 - M &= -2.512 \log_{10}\left(\frac{L / 4\pi d^2}{L / 4\pi (10\,\text{pc})^2}\right) \\
+        m_2 - M &= -2.512 \log_{10}\left(\frac{\frac{1}{d^2}}{\frac{1}{(10\,\text{pc})^2}}\right) \\
+        m_2 - M &= -2.512 \log_{10}\left(\frac{(10\,\text{pc})^2}{d^2}\right) \\
+        m_2 - M &= 5 \log_{10}\left(\frac{d}{10\,\text{pc}}\right)
+    \end{align*}
+\end{foundation}
+
+\bigskip\noindent
+\begin{theory}
+    We know that the relationship between the flux $F$ and luminosity $L$ of a star is given by:
+    \begin{equation}
+        F = \frac{L}{4\pi d^2}
+    \end{equation}
+    where $d$ is the distance to the star. \\
+
+    And hence the absolute magnitude $M$ of a star is defined as:
+    \begin{equation}
+       M_2 - M_1 = -2.512 \log_{10}\left(\frac{L_2}{L_1}\right)
+    \end{equation}
+    We can further relate the apparent magnitude $m$, absolute magnitude $M$, and distance $d$ using the distance modulus formula:
+    \begin{equation}
+        m - M = 5 \log_{10}\left(\frac{d}{10 \text{pc}}\right)
+    \end{equation}
+\end{theory}
+
+\bigskip\noindent
+\begin{example}{Distance modulus quick use}{ex:distmod}
+    A star has $m=9.0$ and $M=4.0$. Estimate its distance.
+
+    \smallskip\textbf{Solution.}
+    \begin{align*}
+        m-M &= 5\log_{10}\frac{d}{10 \text{pc}} \\
+        9.0 - 4.0 &= 5\log_{10}\frac{d}{10 \text{pc}} \\
+        5.0 &= 5\log_{10}\frac{d}{10 \text{pc}} \\
+        \log_{10}\frac{d}{10 \text{pc}} &= 1.0 \\
+        \frac{d}{10 \text{pc}} &= 10^{1.0} = 10 \\
+        d &= 100 \text{pc}
+    \end{align*}
 \end{example}
+
 
 % ---------------------------------------------------------------------------------
 \bigskip\noindent \bigskip\noindent \bigskip\noindent
