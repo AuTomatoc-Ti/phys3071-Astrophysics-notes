@@ -9,7 +9,7 @@ Estimate the time it will take for the star to evolve into a red giant, assuming
 \end{enumerate}
 
 \subsection{Solutions}
-\begin{solution}{1. \textbf{Ratio of Chandrasekhar masses for different $Y_e$ values}}
+\subsubsection*{Solution 1.1: Ratio of Chandrasekhar masses for different $Y_e$ values}
 
 The Chandrasekhar mass $M_{ch}$ is inversely proportional to the square of the mean molecular weight per electron $\mu_e$, which is related to $Y_e$ by $\mu_e = 1/Y_e$. Therefore, we can express $M_{ch}$ as:
 \begin{equation}   
@@ -28,10 +28,8 @@ Thus, the ratio of $M_{ch}$ to $M_{ch,0}$ is:
 \frac{M_{ch}}{M_{ch,0}} = \frac{1.4575 M_\odot}{5.83 M_\odot} \approx 0.25.
 \end{equation}
 Therefore, the Chandrasekhar mass for a white dwarf with $Y_e = 0.5$ is approximately 25\% of the Chandrasekhar mass for a white dwarf with $Y_e = 1$.
-\end{solution}
 
-\begin{solution}{2. \textbf{Chandrasekhar limit for a neutron star}}
-
+\subsubsection*{Solution 1.2: Chandrasekhar limit for a neutron star and corresponding $Y_e$}
 For a neutron star composed of pure neutrons, the mean molecular weight per electron $Y_e$ is effectively zero, since there are no electrons present. However, we can still calculate the corresponding $Y_e$ by considering the composition of the neutron star.
 In a neutron star, the matter is primarily composed of neutrons, with a small fraction of protons and electrons to maintain charge neutrality. The mean molecular weight per electron can be approximated as:
 \begin{equation}
@@ -43,9 +41,14 @@ Since the neutron star is primarily composed of neutrons, we can approximate $n_
 Y_e \approx \frac{n_p}{n_n} \approx 0,
 \end{equation}
 which confirms that the mean molecular weight per electron is effectively zero for a neutron star composed of pure neutrons.
-\end{solution}
 
-\begin{solution}{3. \textbf{Main sequence lifetime}}
-
-The main sequence lifetime of a star is inversely proportional to its mass. For a star with a mass of $10 M_\odot$, the main sequence lifetime is approximately $10^{10}$ years. Therefore, the time it will take for the star to evolve into a red giant is approximately $10^{10}$ years.
-\end{solution}
+\subsubsection*{Solution 1.3: Main sequence lifetime}
+The main sequence lifetime of a star can be estimated using the formula:
+\begin{equation}
+t_{MS} \approx 10^{10} \left( \frac{M}{M_\odot} \right)^{-2.5} \text{ years},
+\end{equation}
+where $M$ is the mass of the star. For a star with a mass of $10 M_\odot$, we can calculate the main sequence lifetime as follows:
+\begin{equation}
+t_{MS} \approx 10^{10} \left( \frac{10 M_\odot}{M_\odot} \right)^{-2.5} \text{ years} = 10^{10} \times 10^{-2.5} \text{ years} = 10^{7.5} \text{ years}.
+\end{equation}
+Thus, the star will evolve into a red giant in approximately $10^{7.5}$ years.

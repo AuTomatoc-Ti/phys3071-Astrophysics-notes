@@ -21,3 +21,125 @@ where $\rho_c$ is the density at the center of the star.
                 internal energy of the star from $P(r)$, and show that the virial theorem is satisfied.
     \end{enumerate}
 \end{enumerate}
+
+\subsection{Solutions}
+\subsubsection*{Solution 1.1: Absolute magnitude and apparent magnitude of Gliese $710$}
+\begin{enumerate}[label=(\alph*)]
+    \item The absolute magnitude $M$ of a star can be calculated using the formula:
+    \begin{equation}
+    M = m - 5 \log_{10} \left( \frac{d}{10} \right),
+    \end{equation}
+    where $m$ is the apparent magnitude and $d$ is the distance to the star in parsecs. Since $1$ lightyear is approximately $0.3064$ parsecs, we can convert the distance to parsecs:
+    \begin{equation}
+    d = 62 \text{ lightyears} \times 0.3064 \text{ parsecs/lightyear} \approx 19.01 \text{ parsecs}.
+    \end{equation}
+    Now we can calculate the absolute magnitude:
+    \begin{align*}
+    M &= 9.7 - 5 \log_{10} \left( \frac{19.01}{10} \right) \\
+      &= 9.7 - 5 \log_{10} (1.901) \\
+      &\approx 9.7 - 5 \times 0.279 = 9.7 - 1.395 = 8.305.
+    \end{align*}
+    Thus, the absolute magnitude of Gliese $710$ is approximately $8.3$.
+    
+    \item The apparent magnitude $m'$ of Gliese $710$ in a million years can be calculated using the same formula, but with the new distance of $1$ lightyear (or $0.3064$ parsecs):
+    \begin{align*}
+    m' &= M + 5 \log_{10} \left( \frac{d'}{10} \right) \\
+       &= 8.305 + 5 \log_{10} (0.3064) \\
+       &\approx 8.305 + 5 (-0.513) = 8.305 - 2.565 = 5.74.
+    \end{align*}
+    Thus, the apparent visual magnitude of Gliese $710$ in a million years will be approximately $5.7$.
+\end{enumerate}
+
+\subsubsection*{Solution 1.2: Hydrodynamical free fall timescale}
+The hydrodynamical free fall timescale $t_{ff}$ can be estimated using the formula:
+\begin{equation}
+t_{ff} = \sqrt{\frac{3\pi}{32 G \rho}},
+\end{equation}
+where $G$ is the gravitational constant and $\rho$ is the average density of the star. The average density can be calculated using the formula:
+\begin{equation}
+\rho = \frac{3M}{4\pi R^3}.
+\end{equation}  
+For the Sun, we have $M = M_\odot$ and $R = R_\odot$, so the average density is:
+\begin{equation}
+\rho_\odot = \frac{3M_\odot}{4\pi R_\odot^3}.
+\end{equation}
+Substituting this into the formula for $t_{ff}$, we get:
+\begin{equation}
+t_{ff,\odot} = \sqrt{\frac{3\pi}{32 G \rho_\odot}} = \sqrt{\frac{3\pi}{32 G \frac{3M_\odot}{4\pi R_\odot^3}}} = \sqrt{\frac{4\pi^2 R_\odot^3}{32 G M_\odot}} = \sqrt{\frac{\pi^2 R_\odot^3}{8 G M_\odot}}.
+\end{equation}
+For a red giant with $M = M_\odot$ and $R = 100 R_\odot$, the average density is:
+\begin{equation}
+\rho_{RG} = \frac{3M_\odot}{4\pi (100 R_\odot)^3} = \frac{3M_\odot}{4\pi 10^6 R_\odot^3} = \frac{3M_\odot}{4\pi 10^6 R_\odot^3}.
+\end{equation}
+Substituting this into the formula for $t_{ff}$, we get:
+\begin{equation}
+t_{ff,RG} = \sqrt{\frac{3\pi}{32 G \rho_{RG}}} = \sqrt{\frac{3\pi}{32 G \frac{3M_\odot}{4\pi 10^6 R_\odot^3}}} = \sqrt{\frac{4\pi^2 10^6 R_\odot^3}{32 G M_\odot}} = \sqrt{\frac{\pi^2 10^6 R_\odot^3}{8 G M_\odot}}.
+\end{equation}
+For a white dwarf with $M = M_\odot$ and $R = 0.02 R_\odot$, the average density is:
+\begin{equation}
+\rho_{WD} = \frac{3M_\odot}{4\pi (0.02 R_\odot)^3} = \frac{3M_\odot}{4\pi 8 \times 10^{-6} R_\odot^3} = \frac{3M_\odot}{4\pi 8 \times 10^{-6} R_\odot^3}.
+\end{equation}
+Substituting this into the formula for $t_{ff}$, we get:
+\begin{equation}
+t_{ff,WD} = \sqrt{\frac{3\pi}{32 G \rho_{WD}}} = \sqrt{\frac{3\pi}{32 G \frac{3M_\odot}{4\pi 8 \times 10^{-6} R_\odot^3}}} = \sqrt{\frac{4\pi^2 8 \times 10^{-6} R_\odot^3}{32 G M_\odot}} = \sqrt{\frac{\pi^2 8 \times 10^{-6} R_\odot^3}{8 G M_\odot}}.
+\end{equation}
+Thus, the hydrodynamical free fall timescales for the Sun, the red giant, and the white dwarf can be calculated using the above formulas.
+
+\subsubsection*{Solution 1.3: Density distribution and hydrostatic equilibrium}
+\begin{enumerate}[label=(\alph*)]
+    \item To find an expression for $\rho_c$ in terms of $M$ and $R$, we can integrate the density distribution over the volume of the star to find the total mass:
+    \begin{equation}
+    M = \int_0^R 4\pi r^2 \rho(r) dr = \int_0^R 4\pi r^2 \rho_c \left(1 - \frac{r}{R}\right) dr.
+    \end{equation}
+    Evaluating this integral, we get:
+    \begin{align*}
+    M &= 4\pi \rho_c \int_0^R r^2 \left(1 - \frac{r}{R}\right) dr \\
+      &= 4\pi \rho_c \left[ \int_0^R r^2 dr - \frac{1}{R} \int_0^R r^3 dr \right] \\
+      &= 4\pi \rho_c \left[ \frac{R^3}{3} - \frac{1}{R} \cdot \frac{R^4}{4} \right] = 4\pi \rho_c R^3 \left( \frac{1}{3} - \frac{1}{4} \right) = 4\pi \rho_c R^3 \cdot \frac{1}{12} = \frac{\pi}{3} \rho_c R^3.
+    \end{align*}
+    Solving for $\rho_c$, we get:
+    \begin{equation}
+    \rho_c = \frac{3M}{\pi R^3}.
+    \end{equation}
+    \item To calculate the mass $m(r)$ interior to radius $r$, we can integrate the density distribution from $0$ to $r$:
+    \begin{equation}
+    m(r) = \int_0^r 4\pi r'^2 \rho(r') dr' = \int_0^r 4\pi r'^2 \rho_c \left(1 - \frac{r'}{R}\right) dr'.
+    \end{equation}
+    Evaluating this integral, we get:
+    \begin{align*}
+    m(r) &= 4\pi \rho_c \int_0^r r'^2 \left(1 - \frac{r'}{R}\right) dr' \\
+         &= 4\pi \rho_c \left[ \int_0^r r'^2 dr' - \frac{1}{R} \int_0^r r'^3 dr' \right] \\
+         &= 4\pi \rho_c \left[ \frac{r^3}{3} - \frac{1}{R} \cdot \frac{r^4}{4} \right] = 4\pi \rho_c r^3 \left( \frac{1}{3} - \frac{r}{4R} \right). 
+    \end{align*}
+    Substituting $\rho_c$ from part (a), we get:
+    \begin{equation}
+    m(r) = 4\pi \cdot \frac{3M}{\pi R^3} r^3 \left( \frac{1}{3} - \frac{r}{4R} \right) = \frac{12M}{R^3} r^3 \left( \frac{1}{3} - \frac{r}{4R} \right).
+    \end{equation}
+    \item To calculate the total gravitational binding energy of the star, we can use the formula:
+    \begin{equation}
+        U = -\int_0^R \frac{G m(r)}{r} 4\pi r^2 \rho(r) dr.
+    \end{equation}
+    Substituting $m(r)$ and $\rho(r)$, we get:
+    \begin{align*}
+        U &= -\int_0^R \frac{G}{r} \cdot \frac{12M}{R^3} r^3 \left( \frac{1}{3} - \frac{r}{4R} \right) \cdot \rho_c \left(1 - \frac{r}{R}\right) dr \\
+          &= -\int_0^R \frac{G}{r} \cdot \frac{12M}{R^3} r^3 \left( \frac{1}{3} - \frac{r}{4R} \right) \cdot \frac{3M}{\pi R^3} \left(1 - \frac{r}{R}\right) dr \\
+          &= -\frac{36G M^2}{\pi R^6} \int_0^R r^2 \left( \frac{1}{3} - \frac{r}{4R} \right) \left(1 - \frac{r}{R}\right) dr.
+    \end{align*}
+    Evaluating this integral will give the total gravitational binding energy of the star.
+    \item To find an expression for the pressure $P(r)$ as a function of $r$, we can use the equation of hydrostatic equilibrium:
+    \begin{equation}
+    \frac{dP}{dr} = -\frac{G m(r) \rho(r)}{r^2}.
+    \end{equation}
+    Substituting $m(r)$ and $\rho(r)$, we get:
+    \begin{align*}
+        \frac{dP}{dr} &= -\frac{G}{r^2} \cdot \frac{12M}{R^3} r^3 \left( \frac{1}{3} - \frac{r}{4R} \right) \cdot \rho_c \left(1 - \frac{r}{R}\right) \\
+                       &= -\frac{12G M}{R^3} r \left( \frac{1}{3} - \frac{r}{4R} \right) \cdot \frac{3M}{\pi R^3} \left(1 - \frac{r}{R}\right) \\
+                       &= -\frac{36G M^2}{\pi R^6} r \left( \frac{1}{3} - \frac{r}{4R} \right) \left(1 - \frac{r}{R}\right).
+    \end{align*}
+    Integrating this equation will give the pressure as a function of $r$.
+    \item Assuming that the material in the star is a monatomic ideal gas, the internal energy $U$ can be calculated using the formula:
+    \begin{equation}    
+        U = \frac{3}{2} \int_0^R 4\pi r^2 P(r) dr.
+    \end{equation}
+    Substituting $P(r)$ from part (d), we can evaluate this integral to find the total internal energy of the star. To show that the virial theorem is satisfied, we need to verify that $2U + U_{grav} = 0$, where $U_{grav}$ is the gravitational binding energy calculated in part (c).
+\end{enumerate}

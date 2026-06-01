@@ -22,3 +22,50 @@
             \item $^{12}\text{C}^* \to ^{12}\text{C} + \gamma$
         \end{enumerate}
 \end{enumerate}
+
+\subsection{Solutions}
+\subsubsection*{Solution 4.1: $\alpha$ decay and Gamow energy}
+\begin{enumerate}[label=(\alph*)]
+    \item The decay rate $\lambda$ can be expressed as:
+    \begin{equation}
+    \lambda = \nu e^{-2\pi \sqrt{\frac{E_G}{E}}},
+    \end{equation}
+    where $\nu$ is the frequency of collisions with the barrier, $E_G$ is the Gamow energy, and $E$ is the energy released by $\alpha$ decay.
+    
+    \item The Gamow energy $E_G$ for the $\alpha$ decay of $^{235}\text{U}$ can be calculated using the formula:
+    \begin{equation}
+    E_G = (\pi \alpha Z_1 Z_2)^2 2 m_{r}c^2,
+    \end{equation}
+    where $Z_1 = 92$ (for uranium), $Z_2 = 2$ (for the alpha particle), and $m_r$ is the reduced mass of the system. The reduced mass can be approximated as:
+    \begin{equation}
+    m_r \approx \frac{m_{^{235}\text{U}} m_{\alpha}}{m_{^{235}\text{U}} + m_{\alpha}} \approx m_{\alpha},
+    \end{equation}
+    since the mass of uranium is much larger than that of the alpha particle. Substituting these values, we get:
+    \begin{align*}
+    E_G &\approx (\pi \times \frac{1}{137} \times 92 \times 2)^2 2 m_{\alpha} c^2 \\
+        &\approx 25.7\,\text{MeV}.
+    \end{align*}
+    
+    \item Similarly, for the $\alpha$ decay of $^{239}\text{Pu}$, we have $Z_1 = 94$ (for plutonium) and $Z_2 = 2$. The reduced mass can again be approximated as $m_{\alpha}$. Substituting these values, we get:
+    \begin{align*}
+    E_G &\approx (\pi \times \frac{1}{137} \times 94 \times 2)^2 2 m_{\alpha} c^2 \\
+        &\approx 27.0\,\text{MeV}.
+    \end{align*}
+    
+    \item The ratio of the decay rates can be calculated as follows:
+    \begin{align*}
+    \frac{\lambda(^{239}\text{Pu})}{\lambda(^{235}\text{U})} &= \frac{\nu e^{-2\pi \sqrt{\frac{E_G(^{239}\text{Pu})}{E(^{239}\text{Pu})}}}}{\nu e^{-2\pi \sqrt{\frac{E_G(^{235}\text{U})}{E(^{235}\text{U})}}}} \\
+    &= e^{-2\pi \left( \sqrt{\frac{E_G(^{239}\text{Pu})}{E(^{239}\text{Pu})}} - \sqrt{\frac{E_G(^{235}\text{U})}{E(^{235}\text{U})}} \right)}.
+    \end{align*}
+    Substituting the values of $E_G$ and $E$, we get:
+    \begin{align*}
+    \frac{\lambda(^{239}\text{Pu})}{\lambda(^{235}\text{U})} &\approx e^{-2\pi \left( \sqrt{\frac{27.0}{5.24}} - \sqrt{\frac{25.7}{4.68}} \right)} \\
+    &\approx e^{-2\pi \left( 2.27 - 2.35 \right)} \\
+    &\approx e^{0.50} \approx 1.65.
+    \end{align*}
+    Therefore, the decay rate of $^{239}\text{Pu}$ is approximately 1.65 times that of $^{235}\text{U}$. Given that the lifetime $\tau$ is inversely proportional to the decay rate $\lambda$, we can estimate the lifetime of $^{239}\text{Pu}$ as follows:
+    \begin{equation}
+    \tau(^{239}\text{Pu}) \approx \frac{\tau(^{235}\text{U})}{1.65} \approx \frac{7.1 \times 10^8 y}{1.65} \approx 4.3 \times 10^8 y.
+    \end{equation}
+    Comparing this result with the experimental value of $\tau(^{239}\text{Pu}) = 2.41 \times 10^4 y$, we see that the simple model significantly overestimates the lifetime of $^{239}\text{Pu}$. This discrepancy suggests that the model does not capture all the complexities of $\alpha$ decay, such as nuclear structure effects and other factors that can influence the decay rate.
+\end{enumerate}

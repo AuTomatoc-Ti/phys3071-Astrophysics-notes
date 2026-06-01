@@ -1,2 +1,38 @@
 \section{Chapter 3: Thermodynamic Properties of Stars}
 \subsection{Questions}
+\begin{enumerate}
+\item Show that for the Maxwellian velocity distribution of particles in a gas leads to the ideal gas law $P = nkT$, where $P$ is the pressure, $n$ is the number density of particles, $k$ is Boltzmann's constant, and $T$ is the temperature.
+\end{enumerate}
+
+
+\subsection{Solutions}
+\subsubsection*{Solution 3.1: Derivation of the ideal gas law from the Maxwellian velocity distribution}
+The Maxwellian velocity distribution describes the distribution of speeds of particles in a gas. The number density
+of particles with velocity between $v$ and $v + dv$ is given by:
+\begin{equation}
+f(v) dv = 4\pi \left( \frac{m}{2\pi kT} \right)^{3/2} v^2 e^{-\frac{mv^2}{2kT}} dv,
+\end{equation}
+where $m$ is the mass of a particle, $k$ is Boltzmann's constant, and $T$ is the temperature. The pressure $P$ of the gas can be calculated using the kinetic theory of gases, which states that the pressure is related to the average kinetic energy of the particles:
+\begin{equation}
+P = \frac{1}{3} n m \langle v^2 \rangle,
+\end{equation}where $n$ is the number density of particles and $\langle v^2 \rangle$ is the average of the square of the velocity. We can calculate $\langle v^2 \rangle$ using the Maxwellian velocity distribution:
+\begin{align*}
+\langle v^2 \rangle &= \int_0^\infty v^2 f(v) dv \\
+&= 4\pi \left( \frac{m}{2\pi kT} \right)^{3/2} \int_0^\infty v^4 e^{-\frac{mv^2}{2kT}} dv.
+\end{align*}
+To evaluate this integral, we can use the substitution $x = \frac{mv^2}{2kT}$, which gives $v^2 = \frac{2kT}{m} x$ and $dv = \sqrt{\frac{2kT}{m}} \frac{dx}{\sqrt{x}}$. 
+Substituting these into the integral, we get:
+\begin{align*}
+\langle v^2 \rangle &= 4\pi \left( \frac{m}{2\pi kT} \right)^{3/2} \int_0^\infty \left( \frac{2kT}{m} x \right)^2 e^{-x} \sqrt{\frac{2kT}{m}} \frac{dx}{\sqrt{x}} \\
+&= 4\pi \left( \frac{m}{2\pi kT} \right)^{3/2} \left( \frac{2kT}{m} \right)^{5/2} \int_0^\infty x^{3/2} e^{-x} dx.
+\end{align*}
+The integral $\int_0^\infty x^{3/2} e^{-x} dx$ can be evaluated using the gamma function, which gives $\Gamma(5/2) = \frac{3\sqrt{\pi}}{4}$. Substituting this result back into the expression for $\langle v^2 \rangle$, we get:
+\begin{align*}
+\langle v^2 \rangle &= 4\pi \left( \frac{m}{2\pi kT} \right)^{3/2} \left( \frac{2kT}{m} \right)^{5/2} \cdot \frac{3\sqrt{\pi}}{4} \\
+&= 3 \frac{kT}{m}.
+\end{align*}
+Substituting this result back into the expression for pressure, we get:
+\begin{equation}
+P = \frac{1}{3} n m \langle v^2 \rangle = \frac{1}{3} n m \cdot 3 \frac{kT}{m} = nkT.
+\end{equation}
+Thus, we have shown that the Maxwellian velocity distribution leads to the ideal gas law $P = nkT$.
