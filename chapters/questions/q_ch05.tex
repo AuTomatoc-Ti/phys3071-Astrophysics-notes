@@ -21,6 +21,9 @@
             \item $^8\text{Be} + ^4\text{He} \to ^{12}\text{C}^*$
             \item $^{12}\text{C}^* \to ^{12}\text{C} + \gamma$
         \end{enumerate}
+        \item In CNO cycle, the slowest reaction in the reaction chain is the proton capture by $^{14}\text{N}$, 
+            \[ ^{14}\text{N} + p \to ^{15}\text{O} + \gamma. \]
+        Estimate the temperature dependence $a$ of the CN cycle in the sun (at $T=1.5 \times 10^7$ K).
 \end{enumerate}
 
 \subsection{Solutions}
@@ -69,3 +72,37 @@
     \end{equation}
     Comparing this result with the experimental value of $\tau(^{239}\text{Pu}) = 2.41 \times 10^4 y$, we see that the simple model significantly overestimates the lifetime of $^{239}\text{Pu}$. This discrepancy suggests that the model does not capture all the complexities of $\alpha$ decay, such as nuclear structure effects and other factors that can influence the decay rate.
 \end{enumerate}
+\subsubsection*{Solution 4.2: Triple alpha process}
+The first two steps involve the absorption of energy to overcome the Coulomb barrier between the nuclei, while the final step releases energy in the form of a gamma photon as the excited carbon nucleus transitions to its ground state.
+Thus, the correct description of the three steps of the triple alpha process, along with whether energy is absorbed or released during each step, is:
+\begin{enumerate}[label=(\alph*)]
+    \item $^4\text{He} + ^4\text{He} \to ^8\text{Be}$ (energy absorbed)
+    \item $^8\text{Be} + ^4\text{He} \to ^{12}\text{C}^*$ (energy absorbed)
+    \item $^{12}\text{C}^* \to ^{12}\text{C} + \gamma$ (energy released)    
+\end{enumerate}
+
+\subsubsection*{Solution 4.3: Temperature dependence of the CN cycle}
+The Gamov energy for the proton capture by $^{14}\text{N}$ can be calculated using the formula:
+\begin{equation}
+E_G = (\pi \alpha Z_1 Z_2)^2 2 m_{r}c^2,
+\end{equation}
+where $Z_1 = 7$ (for nitrogen), $Z_2 = 1$ (for the proton), and $m_r$ is the reduced mass of the system. The reduced mass can be approximated as:
+\begin{equation}
+m_r \approx \frac{m_{^{14}\text{N}} m_p}{m_{^{14}\text{N}} + m_p} \approx m_p,
+\end{equation}
+since the mass of nitrogen is much larger than that of the proton. Substituting these values, we get:
+\begin{align*} 
+E_G &\approx (\pi \times \frac{1}{137} \times 7 \times 1)^2 2 m_p c^2 \\
+    &\approx 3.5\,\text{MeV}.
+\end{align*}
+The temperature dependence $a$ of the CN cycle can be estimated using the formula:
+\begin{equation}
+a = \sqrt[3]{\frac{E_G}{4 k_B T}},
+\end{equation}
+where $k_B$ is the Boltzmann constant and $T$ is the temperature. Substituting the values, we get:
+\begin{align*}
+a &\approx \sqrt[3]{\frac{3.5\,\text{MeV}}{4 \times 8.617 \times 10^{-5} \text{eV/K} \times 1.5 \times 10^7 \text{K}}} \\
+&\approx \sqrt[3]{\frac{3.5 \times 10^6 \text{eV}}{5.17 \times 10^3 \text{eV}}} \\
+&\approx \sqrt[3]{676} \approx 8.8.
+\end{align*}
+Thus, the temperature dependence of the CN cycle in the sun is approximately $a \approx 8.8$.
