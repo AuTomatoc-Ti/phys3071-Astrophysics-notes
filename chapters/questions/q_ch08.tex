@@ -7,3 +7,45 @@ calculate the corresponding $Y_e$ and compare it to the Chandrasekhar mass for a
 \item Suppose a star has a mass of $10 M_\odot$ and is currently in the main sequence phase. 
 Estimate the time it will take for the star to evolve into a red giant, assuming that the main sequence lifetime is approximately $10^{10}$ years for a star of this mass.
 \end{enumerate}
+
+\subsection{Solutions}
+\begin{solution}{1. \textbf{Ratio of Chandrasekhar masses for different $Y_e$ values}}
+
+The Chandrasekhar mass $M_{ch}$ is inversely proportional to the square of the mean molecular weight per electron $\mu_e$, which is related to $Y_e$ by $\mu_e = 1/Y_e$. Therefore, we can express $M_{ch}$ as:
+\begin{equation}   
+M_{ch} = \frac{5.83}{\mu_e^2} M_\odot = 5.83 Y_e^2 M_\odot.
+\end{equation}
+For $Y_e = 1$, we have:
+\begin{equation}
+M_{ch,0} = 5.83 \times 1^2 M_\odot = 5.83 M_\odot.
+\end{equation}
+For $Y_e = 0.5$, we have:
+\begin{equation}
+M_{ch} = 5.83 \times (0.5)^2 M_\odot = 5.83 \times 0.25 M_\odot = 1.4575 M_\odot.
+\end{equation}
+Thus, the ratio of $M_{ch}$ to $M_{ch,0}$ is:
+\begin{equation}
+\frac{M_{ch}}{M_{ch,0}} = \frac{1.4575 M_\odot}{5.83 M_\odot} \approx 0.25.
+\end{equation}
+Therefore, the Chandrasekhar mass for a white dwarf with $Y_e = 0.5$ is approximately 25\% of the Chandrasekhar mass for a white dwarf with $Y_e = 1$.
+\end{solution}
+
+\begin{solution}{2. \textbf{Chandrasekhar limit for a neutron star}}
+
+For a neutron star composed of pure neutrons, the mean molecular weight per electron $Y_e$ is effectively zero, since there are no electrons present. However, we can still calculate the corresponding $Y_e$ by considering the composition of the neutron star.
+In a neutron star, the matter is primarily composed of neutrons, with a small fraction of protons and electrons to maintain charge neutrality. The mean molecular weight per electron can be approximated as:
+\begin{equation}
+Y_e \approx \frac{n_e}{n_b},
+\end{equation}
+where $n_e$ is the number density of electrons and $n_b$ is the number density of baryons (neutrons and protons). For a neutron star, we can assume that $n_e \approx n_p$ (number density of protons) and $n_b \approx n_n + n_p$ (number density of neutrons plus protons).   
+Since the neutron star is primarily composed of neutrons, we can approximate $n_n \gg n_p$, leading to $n_b \approx n_n$. Therefore, we have:
+\begin{equation}
+Y_e \approx \frac{n_p}{n_n} \approx 0,
+\end{equation}
+which confirms that the mean molecular weight per electron is effectively zero for a neutron star composed of pure neutrons.
+\end{solution}
+
+\begin{solution}{3. \textbf{Main sequence lifetime}}
+
+The main sequence lifetime of a star is inversely proportional to its mass. For a star with a mass of $10 M_\odot$, the main sequence lifetime is approximately $10^{10}$ years. Therefore, the time it will take for the star to evolve into a red giant is approximately $10^{10}$ years.
+\end{solution}
