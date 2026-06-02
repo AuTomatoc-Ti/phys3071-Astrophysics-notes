@@ -1,7 +1,9 @@
 \section{Chapter 5: Nuclear Synthesis in Stars}
 
 \subsection{Questions}
-\begin{enumerate}[label=4.\arabic*]
+\begin{enumerate}[label=5.\arabic*]
+    \item Estimate the binding energy per nucleon of $^{56}\text{Fe}$ and $^4\text{He}$, and explain why $^{56}\text{Fe}$ is more stable than $^4\text{He}$. 
+    \item Estimate the energy released per kilogram of matter by the sequence of reactions which fuses hydrogen into iron.
     \item  In the simplest model of $\alpha$ decay, the $\alpha$ particle is pre-formed and trapped within the nucleus by a potential similar to a Coulomb barrier. The mean decay rate $\lambda$ is the frequency $\nu$ 
     (with which the $\alpha$ particle hits the barrier) times the probability of penetration of the barrier (quantum tunneling probability).
         \begin{enumerate}[label=(\alph*)]
@@ -17,8 +19,8 @@
     \item The \textbf{triple alpha process} is a set of nuclear reactions that occur in stars to produce carbon and other elements. Which of the following correctly describes the three steps of the triple alpha
           process, along with whether energy is absorbed or released during each step$?$
         \begin{enumerate}[label=(\alph*)]
-            \item $^4\text{He} + ^4\text{He} \to ^8\text{Be}$
-            \item $^8\text{Be} + ^4\text{He} \to ^{12}\text{C}^*$
+            \item $^{4}\text{He} + ^{4}\text{He} \to ^{8}\text{Be}$
+            \item $^{8}\text{Be} + ^{4}\text{He} \to ^{12}\text{C}^*$
             \item $^{12}\text{C}^* \to ^{12}\text{C} + \gamma$
         \end{enumerate}
         \item In CNO cycle, the slowest reaction in the reaction chain is the proton capture by $^{14}\text{N}$, 
@@ -27,7 +29,52 @@
 \end{enumerate}
 
 \subsection{Solutions}
-\subsubsection*{Solution 4.1: $\alpha$ decay and Gamow energy}
+\subsubsection{Solution 5.1: Binding energy per nucleon}
+The binding energy per nucleon can be calculated using the formula:
+\begin{equation}
+\text{Binding energy per nucleon} = \frac{Z m_p + N m_n - M}{A} c^2,
+\end{equation}
+where $Z$ is the number of protons, $N$ is the number of neutrons, $M$ is the mass of the nucleus, $A$ is the total number of nucleons (protons + neutrons), and $c$ is the speed of light.
+For $^{4}\text{He}$, we have $Z=2$, $N=2$, and $A=4$. The mass of the helium nucleus is approximately $M = 4.002603 u$. Substituting these values, we get:
+\begin{align*}
+\text{Binding energy per nucleon for } ^{4}\text{He} &\approx \frac{2 \times 1.007276 u + 2 \times 1.008665 u - 4.002603 u}{4} c^2 \\
+&\approx \frac{4.031882 u - 4.002603 u}{4} c^2 \\
+&\approx \frac{0.029279 u}{4} c^2 \\    
+&\approx 7.07 \text{ MeV}.
+\end{align*}
+For $^{56}\text{Fe}$, we have $Z=26$, $N=30$, and $A=56$. The mass of the iron nucleus is approximately $M = 55.934936 u$. Substituting these values, we get:
+\begin{align*}
+\text{Binding energy per nucleon for } ^{56}\text{Fe} &\approx \frac{26 \times 1.007276 u + 30 \times 1.008665 u - 55.934936 u}{56} c^2 \\
+&\approx \frac{26.189176 u + 30.25995 u - 55.934936 u}{56} c^2 \\
+&\approx \frac{56.449126 u - 55.934936 u}{56} c^2 \\
+&\approx \frac{0.51419 u}{56} c^2 \\
+&\approx 9.18 \text{ MeV}.
+\end{align*}
+Thus, the binding energy per nucleon for $^{56}\text{Fe}$ is approximately 9.18 MeV, while for $^{4}\text{He}$ it is approximately 7.07 MeV. This means that $^{56}\text{Fe}$ is more stable than $^{4}\text{He}$ because it has a higher binding energy per nucleon, indicating that more energy would be required to break it apart into individual nucleons.
+
+\subsubsection*{Solution 5.2: Energy released by fusion of hydrogen into iron}
+The energy released per kilogram of matter by the sequence of reactions which fuses hydrogen into iron can be estimated by calculating the difference in binding energy per nucleon between hydrogen and iron, and then multiplying by the number of nucleons per kilogram of matter.
+The binding energy per nucleon for hydrogen (proton) is approximately 0 MeV, while for iron it is approximately 9.18 MeV. The energy released per nucleon during the fusion process can be calculated as:
+\begin{equation*}
+\text{Energy released per nucleon} = \text{Binding energy per nucleon of iron} - \text{Binding energy per nucleon of hydrogen} \approx 9.18 \text{ MeV}.
+\end{equation*}  
+To convert this energy to joules, we can use the conversion factor $1 \text{ MeV} = 1.60218 \times 10^{-13} \text{ J}$:
+\begin{equation*}    
+\text{Energy released per nucleon} \approx 9.18 \text{ MeV} \times 1.60218 \times 10^{-13} \text{ J/MeV} \approx 1.47 \times 10^{-12} \text{ J}.
+\end{equation*}
+The number of nucleons per kilogram of matter can be calculated using the average mass of a nucleon, which is approximately $1.67 \times 10^{-27} \text{ kg}$:
+\begin{align*}
+\text{Number of nucleons per kg} &= \frac{1 \text{ kg}}{1.67 \times 10^{-27} \text{ kg/nucleon}} \\
+&\approx 5.99 \times 10^{26} \text{ nucleons/kg}.
+\end{align*}
+Finally, the energy released per kilogram of matter can be calculated as:   
+\begin{align*}
+\text{Energy released per kg} &\approx 1.47 \times 10^{-12} \text{ J/nucleon} \times 5.99 \times 10^{26} \text{ nucleons/kg} \\
+&\approx 8.80 \times 10^{14} \text{ J/kg}.
+\end{align*}
+Thus, the energy released per kilogram of matter by the sequence of reactions which fuses hydrogen into iron is approximately $8.80 \times 10^{14}$ joules.
+
+\subsubsection*{Solution 5.3: $\alpha$ decay and Gamow energy}
 \begin{enumerate}[label=(\alph*)]
     \item The decay rate $\lambda$ can be expressed as:
     \begin{equation}
@@ -72,16 +119,16 @@
     \end{equation}
     Comparing this result with the experimental value of $\tau(^{239}\text{Pu}) = 2.41 \times 10^4 y$, we see that the simple model significantly overestimates the lifetime of $^{239}\text{Pu}$. This discrepancy suggests that the model does not capture all the complexities of $\alpha$ decay, such as nuclear structure effects and other factors that can influence the decay rate.
 \end{enumerate}
-\subsubsection*{Solution 4.2: Triple alpha process}
+\subsubsection*{Solution 5.4: Triple alpha process}
 The first two steps involve the absorption of energy to overcome the Coulomb barrier between the nuclei, while the final step releases energy in the form of a gamma photon as the excited carbon nucleus transitions to its ground state.
 Thus, the correct description of the three steps of the triple alpha process, along with whether energy is absorbed or released during each step, is:
 \begin{enumerate}[label=(\alph*)]
-    \item $^4\text{He} + ^4\text{He} \to ^8\text{Be}$ (energy absorbed)
-    \item $^8\text{Be} + ^4\text{He} \to ^{12}\text{C}^*$ (energy absorbed)
-    \item $^{12}\text{C}^* \to ^{12}\text{C} + \gamma$ (energy released)    
+    \item $^4\text{He} + ^4\text{He} \to ^8\text{Be}$ (\textbf{energy absorbed})
+    \item $^8\text{Be} + ^4\text{He} \to ^{12}\text{C}^*$ (\textbf{energy absorbed})
+        \item $^{12}\text{C}^* \to ^{12}\text{C} + \gamma$ (\textbf{energy released})    
 \end{enumerate}
 
-\subsubsection*{Solution 4.3: Temperature dependence of the CN cycle}
+\subsubsection*{Solution 5.5: Temperature dependence of the CN cycle}
 The Gamov energy for the proton capture by $^{14}\text{N}$ can be calculated using the formula:
 \begin{equation}
 E_G = (\pi \alpha Z_1 Z_2)^2 2 m_{r}c^2,

@@ -23,6 +23,16 @@ These assumptions allow us to derive the basic equations governing the structure
 \end{align}
 \end{theory}
 
+\begin{example}{Estimating Central Pressure of a Star}
+Consider a star with a mass of $M = 1.5 M_\odot$ and a radius of $R = 2 R_\odot$. Assuming the star is in hydrostatic equilibrium and composed of an ideal gas, we can estimate the central pressure $P_c$ using the equation of hydrostatic equilibrium:
+\begin{equation}
+P_c \approx \frac{G M^2}{8\pi R^4}
+\end{equation}
+Substituting the values for the Sun, we get:
+\begin{equation}
+P_c \approx \frac{G (1.5 M_\odot)^2}{8\pi (2 R_\odot)^4} \approx 1.5 \times 10^{16} \, \text{Pa}
+\end{equation}
+\end{example}
 
 \begin{theory}
 By expressing the stellar structure equations in terms of mass $m$ instead of radius $r$, we can derive a set of equations that are often more convenient for numerical integration. The equations become:
@@ -42,6 +52,17 @@ The mass range of stars is typically defined as follows:
     \item \textbf{High-mass stars}: $M > 8 M_\odot$ (e.g., O and B type stars)  
     \item \textbf{Brown dwarfs}: $M < 0.08 M_\odot$ (substellar objects that do not sustain hydrogen fusion)
 \end{itemize}
+
+\subsection{Mass-Luminosity relationship}
+The mass-luminosity relationship is an empirical relation that describes how the luminosity of a star depends on its mass. 
+\begin{foundation}
+For main-sequence stars, the luminosity $L$ is approximately proportional to a power of the mass $M$:
+\begin{equation}
+L \propto M^\alpha
+\end{equation}
+where $\alpha$ is a constant that varies depending on the mass range of the star. For stars with masses similar to the Sun, $\alpha$ is typically around 3.5. 
+For very low-mass stars, $\alpha$ can be closer to 2, while for very high-mass stars, $\alpha$ can be greater than 3.5.
+\end{foundation}
 
 
 

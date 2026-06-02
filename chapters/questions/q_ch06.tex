@@ -1,2 +1,45 @@
 \section{Chapter 6: Stellar Models}
 \subsection{Questions}
+\begin{enumerate}
+    \item Show that $F(r) =P+\frac{Gm^2}{8\pi r^4}$ is a decreasing function of $r$. Hence, find the lower limit of the central pressure $P_c$ of a star in terms of its mass $M$ and radius $R$.
+\end{enumerate}
+
+\subsection{Solutions}
+\subsubsection*{Solution 6.1: Lower limit of central pressure}
+To show that $F(r) = P + \frac{Gm^2}{8\pi r^4}$ is a decreasing function of $r$, we need to compute the derivative of $F(r)$ with respect to $r$ and show that it is negative.
+First, we compute the derivative of $F(r)$:
+\begin{align*}
+\frac{dF}{dr} &= \frac{dP}{dr} + \frac{d}{dr}\left(\frac{Gm^2}{8\pi r^4}\right) \\
+&= \frac{dP}{dr} + \frac{G}{8\pi} \cdot \frac{d}{dr}\left(\frac{m^2}{r^4}\right).
+\end{align*}    
+Next, we compute the derivative of $\frac{m^2}{r^4}$:
+\begin{align*}  
+\frac{d}{dr}\left(\frac{m^2}{r^4}\right) &= \frac{d}{dr}(m^2) \cdot \frac{1}{r^4} + m^2 \cdot \frac{d}{dr}\left(\frac{1}{r^4}\right) \\
+&= 2m \cdot \frac{dm}{dr} \cdot \frac{1}{r^4} - m^2 \cdot \frac{4}{r^5} \\
+&= \frac{2m}{r^4} \cdot 4\pi r^2 \rho - \frac{4m^2}{r^5} \\
+&= \frac{8\pi m \rho}{r^2} - \frac{4m^2}{r^5}.
+\end{align*}
+Substituting this back into the expression for $\frac{dF}{dr}$, we get:
+\begin{align*}  
+\frac{dF}{dr} &= \frac{dP}{dr} + \frac{G}{8\pi} \left( \frac{8\pi m \rho}{r^2} - \frac{4m^2}{r^5} \right) \\
+&= \frac{dP}{dr} + G \cdot \frac{m \rho}{r^2} - \frac{G m^2}{2\pi r^5}.
+\end{align*}
+Using the equation of hydrostatic equilibrium, we know that $\frac{dP}{dr} = -\frac{G m \rho}{r^2}$. Substituting this into the expression for $\frac{dF}{dr}$, we get:
+\begin{align*}
+\frac{dF}{dr} &= -\frac{G m \rho}{r^2} + 2G \cdot \frac{m \rho}{r^2} - G \cdot \frac{m^2}{\pi r^5} \\
+&= G \cdot \frac{m \rho}{r^2} - G \cdot \frac{m^2}{\pi r^5}.
+\end{align*}
+Since $m$ and $\rho$ are positive, and $r$ is also positive, we can see that $\frac{dF}{dr}$ is negative for all $r > 0$. Therefore, $F(r)$ is a decreasing function of $r$.
+To find the lower limit of the central pressure $P_c$, we evaluate $F(r)$ at $r = R$:
+\begin{equation}
+F(R) = P(R) + \frac{G M^2}{8\pi R^4}.
+\end{equation}  
+Since $F(r)$ is decreasing, we have $F(R) \leq \lim_{r \to 0} F(r) \eqqcolon P_c$. Therefore, we can write:
+\begin{equation}
+    P_c \geq P(R) + \frac{G M^2}{8\pi R^4}.
+\end{equation}
+Assuming that the pressure at the surface of the star is negligible (i.e., $P(R) \approx 0$), we can simplify this to:
+\begin{equation}
+    P_c \geq \frac{G M^2}{8\pi R^4}.
+\end{equation}
+This gives us the lower limit of the central pressure of a star in terms of its mass $M$ and radius $R$.
