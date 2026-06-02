@@ -141,10 +141,11 @@ For ideal gases, $\mu \to 0$, and we will assume $\mu = 0$ in below contents unl
 \subsection{Spin Degeneracy Factor}
 %Explanation of g
 \begin{intuition}
-    Imagine in a hotel, there are multiple rooms with different price(Energy level), the spin is like the no. of beds in the room, which can accommodate multiple guests(particles) with the same energy level. 
+    Imagine in a hotel, there are multiple rooms with different price (Energy level), the spin is like the no. of beds in the room, which can accommodate multiple guests(particles) with the same energy level. 
     When 2 particles enter the same room(share the same energy level), we call it a degenerate state. \\
 
-    The degeneracy factor $g$ states how many particles can stay in the same energy level, which is determined by the intrinsic spin quantum number $s$ of the particle. On the other hand, it can be treat as the degree of freedom of the particle, which is the number of independent ways the particle can exist in a given energy state.
+    The degeneracy factor $g$ states how many particles can stay in the same energy level, which is determined by the intrinsic spin quantum number $s$ of the particle. 
+    On the other hand, it can be treat as the degree of freedom of the particle, which is the number of independent ways the particle can exist in a given energy state.
 \end{intuition}
 
 \bigskip\noindent
@@ -422,3 +423,13 @@ F_{\text{rad}} &= \frac{c}{4}u_{\text{rad}} = \sigma T^4, \\
 L_{\text{rad}} &= 4\pi R^2 F_{\text{rad}} = 4\pi R^2 \sigma T^4.
 \end{align} 
 \end{theory}
+
+\subsection{Saha Equation}
+
+\begin{theory}
+\begin{equation}
+\frac{n_{i+1} n_e}{n_i} = \frac{2}{\lambda_e^3} \frac{g_{i+1}}{g_i} e^{-E_i/k_B T},
+\end{equation}
+where $\lambda_e = \sqrt{\frac{h^2}{2\pi m_e k_B T}}$ is the thermal de Broglie wavelength of the electron, $g_i$ and $g_{i+1}$ are the statistical weights of the ionization states, and $E_i$ is the ionization energy.
+\end{theory}
+
